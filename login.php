@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+    <?php include 'includes/header.php'; ?>
     <h2>Login</h2>
 
     <form method="POST">
@@ -44,4 +45,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button> Submit </button>
         </section>
     </form>
+    <?php include 'includes/footer.php'; ?>
 </body>
