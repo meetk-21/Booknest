@@ -4,7 +4,7 @@ require 'database.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['book_id'])) {
         $book_id = $_POST['book_id'];
-        $user_id = 1;  
+        $user_id = 1;
         $rating = $_POST['rating'];
         $review = $_POST['review'];
 
@@ -35,18 +35,31 @@ if (isset($_POST['book_id'])) {
 }
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Leave a Review for <?php echo htmlspecialchars($book['title'] ?? 'Unknown Book'); ?></h2>
-<form method="POST">
-    <input type="hidden" name="book_id" value="<?php echo $book_id; ?>">
-    Rating:
-    <select name="rating" required>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select><br>
-    Review: <textarea name="review" required></textarea><br>
-    <input type="submit" value="Submit Review">
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+</head>
+
+<body>
+    <h2>Leave a Review</h2>
+    <form method="POST">
+        <input type="hidden" name="book_id" value="<?php echo $book_id; ?>">
+        Rating:
+        <select name="rating" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br>
+        Review: <textarea name="review" required></textarea>
+        <input type="submit" value="Submit Review">
+    </form>
+
+</body>
+
+</html>
