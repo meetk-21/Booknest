@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $email = $_POST['email'];
 
-// Input validation and sanitization can be added here
 
     $stmt = $pdo->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
     if ($stmt->execute([$username, $password, $email])) {
@@ -17,9 +16,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<form method="POST">
-    Username: <input type="text" name="username" required><br>
-    Password: <input type="password" name="password" required><br>
-    Email: <input type="email" name="email" required><br>
-    <input type="submit" value="Register">
-</form>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <h2>Register Here</h2>
+    <form method="POST">
+        <section>
+            <label for="username"> Username: </label>
+            <input type="text" name="username" id="username">
+        </section>
+        <section>
+            <label for="password"> Password: </label>
+            <input type="password" name="password" id="password">
+        </section>
+        <section>
+            <label for="Email"> Email: </label>
+            <input type="password" name="password" id="password">
+        </section>
+        <section>
+            <button> Submit </button>
+        </section>
+    </form>
+
+
+</body>
+
+</html>
