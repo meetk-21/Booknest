@@ -1,3 +1,6 @@
+<?php include 'includes/config.php'; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +11,9 @@
 </head>
 
 <body>
+    <?php include 'includes/header.php'; ?>
     <h2>Welcome To Booknest Book Store</h2>
+    <?php include 'includes/footer.php'; ?>
 
 </body>
 
