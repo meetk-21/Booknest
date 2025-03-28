@@ -16,6 +16,8 @@ $books = $stmt->fetchAll();
 </head>
 
 <body>
+    <?php include 'includes/header.php'; ?>
+
     <form method="GET">
         Search: <input type="text" name="search" value="<?php echo htmlspecialchars($search); ?>">
         <input type="submit" value="Search">
@@ -31,6 +33,7 @@ $books = $stmt->fetchAll();
             </li>
         <?php endforeach; ?>
     </ul>
+    <?php include 'includes/footer.php'; ?>
 
 </body>
 

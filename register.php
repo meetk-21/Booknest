@@ -27,6 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+    <?php include 'includes/header.php'; ?>
+
     <h2>Register Here</h2>
     <form method="POST">
         <section>
@@ -39,13 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </section>
         <section>
             <label for="Email"> Email: </label>
-            <input type="password" name="password" id="password">
-        </section>
-        <section>
-            <button> Submit </button>
-        </section>
+            <input type="email" name="email"
+                </section>
+            <section>
+                <button> Submit </button>
+            </section>
     </form>
-
+    <?php include 'includes/footer.php'; ?>
 
 </body>
 
