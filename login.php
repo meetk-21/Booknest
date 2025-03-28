@@ -29,6 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+    <h2>Login</h2>
+
     <form method="POST">
         <section>
             <label for="username"> Username: </label>
