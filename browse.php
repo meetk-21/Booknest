@@ -6,6 +6,7 @@ $stmt = $pdo->prepare("SELECT * FROM books WHERE title LIKE ? OR author LIKE ?")
 $stmt->execute(["%$search%", "%$search%"]);
 $books = $stmt->fetchAll();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,7 @@ $books = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browsing</title>
+    <link rel="stylesheet" href="./css/browse-style.css">
 </head>
 
 <body>
