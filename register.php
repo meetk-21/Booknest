@@ -24,6 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="./css/register-style.css">
+
 </head>
 
 <body>
@@ -44,9 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="email" name="email"
                 </section>
             <section>
-                <button> Submit </button>
+                <input type="submit" value="Register">
             </section>
     </form>
+
     <?php include 'includes/footer.php'; ?>
 
 </body>

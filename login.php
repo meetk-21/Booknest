@@ -26,6 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="./css/login-style.css">
+
 </head>
 
 <body>
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="password" name="password" id="password">
         </section>
         <section>
-            <button> Submit </button>
+            <input type="submit" value="Login">
         </section>
     </form>
     <?php include 'includes/footer.php'; ?>
