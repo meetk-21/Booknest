@@ -1,6 +1,6 @@
 <?php
 require 'database.php';
-
+$book_id = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['book_id'])) {
         $book_id = $_POST['book_id'];
@@ -17,22 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "Book ID is missing!";
     }
-}
-
-
-if (isset($_POST['book_id'])) {
-    $book_id = $_POST['book_id'];
-    $stmt = $pdo->prepare("SELECT * FROM books WHERE id = ?");
-    $stmt->execute([$book_id]);
-    $book = $stmt->fetch();
-    if (!$book) {
-        echo "Book not found!";
-        exit;
-    }
 } else {
-    echo "Book ID is missing!";
-    exit;
+    //read the books from the database and display them on the page
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -42,9 +30,13 @@ if (isset($_POST['book_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review</title>
+    <link rel="stylesheet" href="./css/review-style.css">
+
 </head>
 
 <body>
+    <?php include 'includes/header.php'; ?>
+
     <h2>Leave a Review</h2>
     <form method="POST">
         <input type="hidden" name="book_id" value="<?php echo $book_id; ?>">
@@ -55,10 +47,12 @@ if (isset($_POST['book_id'])) {
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-        </select><br>
+        </select>
         Review: <textarea name="review" required></textarea>
         <input type="submit" value="Submit Review">
     </form>
+
+    <?php include 'includes/footer.php'; ?>
 
 </body>
 
