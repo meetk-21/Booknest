@@ -6,32 +6,30 @@ body {
     color: #333;
 }
 
+/* Heading Styling */
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #2c3e50;
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 2px solid #ddd;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 /* Form Styling */
 form {
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 25px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-input[type="hidden"] {
-    display: none;
-}
-
-select,
-textarea,
+/* Input Styling */
+input[type="text"],
+input[type="password"],
 input[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -42,23 +40,9 @@ input[type="submit"] {
     font-size: 16px;
 }
 
-/* Style for textarea */
-textarea {
-    height: 150px;
-    resize: vertical;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-}
-
-/* Styling for select dropdown */
-select {
-    background-color: #f8f9fa;
-    font-size: 16px;
-}
-
-select:focus,
-textarea:focus,
-input[type="submit"]:focus {
+/* Focus Styling */
+input[type="text"]:focus,
+input[type="password"]:focus {
     outline: none;
     border-color: #3498db;
 }
@@ -69,6 +53,11 @@ input[type="submit"] {
     color: white;
     cursor: pointer;
     font-size: 18px;
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
     transition: background-color 0.3s;
 }
 
@@ -100,4 +89,21 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 14px;
+    }
 }

@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container to hold all page content */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+Navigation Styling
+nav {
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Main Section Styling */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main-content .section {
+    flex: 1;
+    background: #fff;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main-content .section:last-child {
+    margin-right: 0;
+}
+
+/* Section Titles */
+.main-content .section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Footer Styling */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .main-content .section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-content .section:last-child {
+        margin-bottom: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
