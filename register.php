@@ -43,12 +43,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="password" name="password" id="password">
         </section>
         <section>
-            <label for="Email"> Email: </label>
-            <input type="email" name="email"
-                </section>
-            <section>
-                <input type="submit" value="Register">
-            </section>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+        </section>
+        <section>
+            <input type="submit" value="Register">
+        </section>
     </form>
 
     <?php include 'includes/footer.php'; ?>
