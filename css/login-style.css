@@ -44,12 +44,12 @@ input[type="submit"] {
 input[type="text"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: #535761;
 }
 
 /* Submit Button Styling */
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #2C3E50;
     color: white;
     cursor: pointer;
     font-size: 18px;
@@ -62,7 +62,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #2980b9;
+    background-color: #535761;
 }
 
 /* Error and Success Messages */
