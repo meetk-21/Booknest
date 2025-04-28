@@ -181,7 +181,7 @@ $_SESSION['csrf_token'] = $csrf_token;
                                         autocomplete="new-password"
                                         minlength="8">
                                     <button type="button" class="password-toggle" aria-label="Show password" data-show="false">
-                                        <span class="password-toggle-icon" aria-hidden="true">👁️</span>
+                                        <span class="password-toggle-icon" aria-hidden="true"></span>
                                     </button>
                                 </div>
                                 <p class="form-hint">Password must be at least 8 characters and include uppercase, lowercase, and numbers</p>
@@ -198,7 +198,7 @@ $_SESSION['csrf_token'] = $csrf_token;
                                         aria-required="true"
                                         autocomplete="new-password">
                                     <button type="button" class="password-toggle" aria-label="Show password" data-show="false">
-                                        <span class="password-toggle-icon" aria-hidden="true">👁️</span>
+                                        <span class="password-toggle-icon" aria-hidden="true"></span>
                                     </button>
                                 </div>
                                 <p class="form-hint">Re-enter your password to confirm</p>
