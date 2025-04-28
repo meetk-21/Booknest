@@ -20,6 +20,10 @@ $books = $stmt->fetchAll();
 <body>
     <?php include 'includes/header.php'; ?>
 
+    <?php if (isset($_GET['success']) && $_GET['success'] === 'review'): ?>
+        <div class="success-message">Your review has been submitted successfully!</div>
+    <?php endif; ?>
+
     <form method="GET">
         Search: <input type="text" name="search" value="<?php echo htmlspecialchars($search); ?>">
         <input type="submit" value="Search">
